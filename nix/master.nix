@@ -1,7 +1,8 @@
-{ config
-, pkgs
-, lib
-, ...
+{
+  config,
+  pkgs,
+  lib,
+  ...
 }:
 let
   cfg = config.services.buildbot-nix.master;
@@ -389,7 +390,6 @@ in
         ps.treq
         ps.psycopg2
         (ps.toPythonModule pkgs.buildbot-worker)
-        pkgs.buildbot-plugins.www-react
         (pkgs.python3.pkgs.callPackage ../default.nix { })
         (pkgs.python3.pkgs.callPackage ./buildbot-gitea.nix { buildbot = pkgs.buildbot; })
       ];
