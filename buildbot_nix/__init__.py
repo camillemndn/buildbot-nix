@@ -128,7 +128,7 @@ class BuildTrigger(Trigger):
             if self.project.name == "SaumonNet/proxmox-nixos":
                 props.setProperty("attic-cache", "proxmox-nixos", source)
             else:
-                props.setProperty("attic-cache", "julien", source)
+                props.setProperty("attic-cache", "camille", source)
             # we use this to identify builds when running a retry
             props.setProperty("build_uuid", str(uuid.uuid4()), source)
 
